@@ -1,0 +1,55 @@
+  <link rel="stylesheet" href="/css/jquery-jvectormap-2.0.5.css" type="text/css" media="screen"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <script src="/js/jquery-jvectormap-2.0.5.min.js"></script>
+  <script src="/js/jquery-jvectormap-world-mill.js"></script>
+
+  <script type="text/javascript">
+    var $j = jQuery.noConflict();
+    $j(function(){
+	$.getJSON('/js/hoveragy.json', function(data){
+	// var countries = {{ .Site.Params.hoveragy.world.countries }};
+	// var data = {{ .Site.Params.hoveragy.world.data }};
+	// function to_map(acc, cur) {
+	//     index = countries.indexOf(cur);
+	//     if (index >= 0)
+	// 	acc[cur] = data[index];
+	//     else
+	// 	acc[cur] = 1;
+	//     return acc;
+	// }
+	// var coverage = countries.reduce(to_map, {});
+
+	// function to_upper(value, key, map) {
+	//     map[key.toUpperCase()] = value;
+	// }
+	// var coverage = {};
+	// {{ .Site.Params.hoveragy.world }}.forEach(to_upper, coverage);
+
+	// var data = {{ .Site.Params.hoveragy.world }};
+	// alert(JSON.stringify(data));
+	var coverage = data.world;
+	$j('#world-map').vectorMap({
+	    map: 'world_mill',
+	    backgroundColor: '#a5bfdd',
+	    series: {
+		regions: [{
+		    values: data.world,
+		    scale: {{ .Site.Params.hoveragy.colors }},
+		}]
+	    },
+	    onRegionTipShow: function(e, el, code){
+		var html = el.html();
+		if (data.home == code)
+		    html += ' (Home)'
+		else if (coverage[code])
+		    html += ' (Visits: ' + coverage[code] + ')';
+
+		el.html(html);
+	    }
+	});
+	});
+    });
+  </script>
+
+  <div id="world-map" style="width: 800px; height: 500px"></div>

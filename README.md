@@ -1,8 +1,8 @@
-* Huveragy
+# Huveragy
 
 A simple [Hugo](https://gohugo.io/) partial template that renders a world coverage map using [jVectorMap](https://jvectormap.com/)'s excelent SVG library and map dataset from [NaturalEarthData](http://www.naturalearthdata.com/).
 
-*** Instalation
+## Instalation
 
 Create `partials` dir and add this repo as submodule:
 
@@ -10,7 +10,7 @@ Create `partials` dir and add this repo as submodule:
 mkdir -p layouts/partials
 git submodule git@github.com:icostan/huveragy.git layouts/partials/
 ```
-*** Configuration
+## Configuration
 
 ```shell
 cat <EOF > config.toml
@@ -19,7 +19,7 @@ cat <EOF > config.toml
   url = "/js/huveragy.json"
 EOF
 ```
-*** Coverage data
+## Coverage data
 
 By default it loads project's default coverage file but it can be configured to load coverage data from anywhere.
 
@@ -38,9 +38,9 @@ cat <EOF > static/js/huveragy.json
 EOF
 ```
 
-*** Usage
+## Usage
 
-*** in HTML pages
+### in HTML pages
 
 Just add the following snippet to any HTML page to display the coverage map.
 
@@ -48,7 +48,7 @@ Just add the following snippet to any HTML page to display the coverage map.
 {{ partial "huveragy/huveragy.html" }}
 ```
 
-*** in Markdown pages
+### in Markdown pages
 
 A bit more compicated since Hugo does not allow mixing of Markdown and code/variables but rest assured, I've got this for you. Note the `.` (dot) after `(.Get 0)`, that is important, that is Hugo's context.
 
@@ -67,11 +67,12 @@ Then drop the following snippet in any Markdown page to display the coverage map
 {{< partial "huveragy/huveragy.html" >}}
 ```
 
-** Roadmap
-	- [X] world coverage
-	- [ ] support the continents
-	- [ ] country coverage: at states/regions/counties level
-	- [ ] auto-load required JS files based on configuration
-	- [ ] configurable text for "onTipShow" event
-	- [ ] DRY everything
-	- [ ] distribute JS/CSS/HTML files via cdnjs.com
+## Roadmap
+
+- [X] world coverage
+- [ ] support the continents
+- [ ] country coverage: at states/regions/counties level
+- [ ] auto-load required JS files based on configuration
+- [ ] configurable text for "onTipShow" event
+- [ ] DRY everything
+- [ ] distribute JS/CSS/HTML files via cdnjs.com

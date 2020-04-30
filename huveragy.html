@@ -5,8 +5,7 @@
   <script src="https://icostan.github.io/huveragy/jvectormap/jquery-jvectormap-world-mill.js"></script>
 
   <script type="text/javascript">
-    var $j = jQuery.noConflict();
-    $j(function(){
+    jQuery(function($){
 	$.getJSON('/js/hoveragy.json', function(data){
 	// var countries = {{ .Site.Params.hoveragy.world.countries }};
 	// var data = {{ .Site.Params.hoveragy.world.data }};
@@ -29,7 +28,7 @@
 	// var data = {{ .Site.Params.hoveragy.world }};
 	// alert(JSON.stringify(data));
 	var coverage = data.world;
-	$j('#world-map').vectorMap({
+	$('#world-map').vectorMap({
 	    map: 'world_mill',
 	    backgroundColor: '#a5bfdd',
 	    series: {

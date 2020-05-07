@@ -76,3 +76,4 @@ Then drop the following snippet in any Markdown page to display the coverage map
 - [ ] configurable text for "onTipShow" event
 - [ ] DRY everything
 - [ ] distribute JS/CSS/HTML files via cdnjs.com
+- [ ] try jqvmaps instead jvectormaps library, better options support

@@ -1,0 +1,10 @@
+#+STARTUP: indent
+* TODOs
+- [X] world coverage
+- [ ] continent coverage
+- [ ] country coverage: at states/regions/counties level
+- [ ] auto-load required JS files based on configuration
+- [ ] configurable text for "onTipShow" event
+- [ ] DRY everything
+- [ ] distribute JS/CSS/HTML files via cdnjs.com
+- [ ] try jqvmaps instead jvectormaps library, better options support

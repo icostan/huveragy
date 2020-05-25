@@ -1,0 +1,15 @@
+.vmap {
+    width: 740px;
+    height: 400px;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding: 0px;
+}
+
+.ui-widget .ui-widget-content {
+    border: 0px;
+}
+.ui-widget-content {
+    border: 0px;
+}

@@ -15,29 +15,10 @@ git submodule git@github.com:icostan/huveragy.git layouts/partials/
 ```shell
 cat <EOF > config.toml
 [Params.huveragy]
+  countries = { "US"=5, "IN": 2, "RO": 5 }
   colors = ['#dc9658', '#d62728']
-  url = "/js/huveragy.json"
 EOF
 ```
-## Coverage data
-
-By default it loads project's default coverage file but it can be configured to load coverage data from anywhere.
-
-```shell
-cat <EOF > static/js/huveragy.json
-{
-  "home": "RO",
-  "world": {
-    "AU": 1,
-    "BR": 1,
-    "FR": 2,
-    "US": 5,
-    "VN": 1
-  }
-}
-EOF
-```
-
 ## Usage
 
 ### in HTML pages
@@ -70,10 +51,10 @@ Then drop the following snippet in any Markdown page to display the coverage map
 ## Roadmap
 
 - [X] world coverage
-- [ ] continent coverage
+- [X] continent coverage
 - [ ] country coverage: at states/regions/counties level
 - [ ] auto-load required JS files based on configuration
 - [ ] configurable text for "onTipShow" event
 - [ ] DRY everything
 - [ ] distribute JS/CSS/HTML files via cdnjs.com
-- [ ] try jqvmaps instead jvectormaps library, better options support
+- [X] try jqvmaps instead jvectormaps library, better options support

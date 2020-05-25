@@ -1,14 +1,14 @@
 # Huveragy
 
-A simple [Hugo](https://gohugo.io/) partial template that renders a world coverage map using [jVectorMap](https://jvectormap.com/)'s SVG library and dataset from [NaturalEarthData](http://www.naturalearthdata.com/).
+A simple [Hugo](https://gohugo.io/) partial template that renders a world coverage map using [jQuery Vector Map](https://github.com/10bestdesign/jqvmap/)'s SVG library and dataset from [NaturalEarthData](http://www.naturalearthdata.com/).
 
 ## Instalation
 
-Go to your Hugo project and create `layouts/partials` dir and add this repo as submodule:
+Go to your Hugo project, create `layouts/partials` dir and add this repo as submodule:
 
 ```shell
 mkdir -p layouts/partials
-git submodule git@github.com:icostan/huveragy.git layouts/partials/
+git submodule add git@github.com:icostan/huveragy.git layouts/partials/
 ```
 ## Configuration
 

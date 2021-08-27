@@ -15,7 +15,7 @@ git submodule add git@github.com:icostan/huveragy.git layouts/partials/
 ```shell
 cat <EOF > config.toml
 [Params.huveragy]
-  countries = { "US"=5, "IN": 2, "RO": 5 }
+  countries = { "US"=5, "IN"=2, "RO"=5 }
   colors = ['#dc9658', '#d62728']
 EOF
 ```
